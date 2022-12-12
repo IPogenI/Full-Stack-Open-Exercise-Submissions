@@ -11,13 +11,12 @@ const Hello = ({ name, age }) => {
 }
 
 
-const App = () => {
-  const name = "Prottoy"
-  const age = 21
+const App = (props) => {
+  const {counter} = props 
 
   return (
     <div>
-      <Hello name={name} age={age} />
+      <p>Decimal Numbers: {counter}</p>
     </div>
   )
 }
