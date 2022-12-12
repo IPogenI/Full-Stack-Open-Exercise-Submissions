@@ -1,22 +1,17 @@
-const Hello = ({ name, age }) => {
-  
-  const bornYear = () => new Date().getFullYear() - age
-
-  return (
-    <div>
-      <p>Hello {name}, you must be {age} years old.</p>
-      <p>So you were probably born in {bornYear()}</p>
-    </div>
-  )
-}
-
+import {useState} from "react"
 
 const App = (props) => {
-  const {counter} = props 
+  const [counter, setCounter] = useState(0)
+
+  console.log('rendering..', counter)
+
+  setTimeout(
+    () => setCounter(counter + 1), 1000
+  )
 
   return (
     <div>
-      <p>Decimal Numbers: {counter}</p>
+      <p>{counter}</p>
     </div>
   )
 }
