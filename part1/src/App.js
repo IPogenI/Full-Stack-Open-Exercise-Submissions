@@ -1,17 +1,18 @@
 import {useState} from "react"
 
-const App = (props) => {
+const App = () => {
   const [counter, setCounter] = useState(0)
-
-  console.log('rendering..', counter)
-
-  setTimeout(
-    () => setCounter(counter + 1), 1000
-  )
+  
 
   return (
     <div>
-      <p>{counter}</p>
+      <div>{counter}</div>
+      <button onClick={() => setCounter(counter + 1)}>
+        plus
+      </button>
+      <button onClick={() => setCounter(counter - 1)}> 
+        zero
+      </button>
     </div>
   )
 }
