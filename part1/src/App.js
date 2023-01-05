@@ -12,7 +12,7 @@ const App = () => {
       <Display counter={counter}/>
       <Button onClick={increaseByOne} text="plus"/>
       <Button onClick={decreaseByOne} text="minus"/>
-      <Button onClick={setToZero} text="zero"/>
+      <Button onClick={setToZero} text="zeroo"/>
     </div>
   )
 }
